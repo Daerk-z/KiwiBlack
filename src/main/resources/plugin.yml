@@ -1,0 +1,24 @@
+main: kb.daerk.KiwiBlackPP
+version: 1.0.0
+name: KiwiBlack
+author: DaerK
+api-version: 1.21
+
+
+##
+## Comandos registrados para el plugin.
+##
+
+commands:
+  kb:
+    description: Comando principal de KiwiBlack.
+  fly:
+    description: Comando que habilita el modo vuelo.
+  xp:
+    description: Comando que otorga experiencia al jugador.
+  tpt:
+    description: Comando que teletransporta un jugador a otro, cobrando diamantes por cada uso del comando.
+  item:
+    description: Comando que otorga items previamente realizados.
+  menu:
+    description: Comando que permite abrir un inventario.

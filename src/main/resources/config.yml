@@ -1,0 +1,39 @@
+#######################################################################
+#  ████████▄     ▄████████    ▄████████    ▄████████    ▄█   ▄█▄      #
+#  ███   ▀███   ███    ███   ███    ███   ███    ███   ███ ▄███▀      #
+#  ███    ███   ███    ███   ███    █▀    ███    ███   ███▐██▀        #
+#  ███    ███   ███    ███  ▄███▄▄▄      ▄███▄▄▄▄██▀  ▄█████▀         #
+#  ███    ███ ▀███████████ ▀▀███▀▀▀       ███▀▀▀▀▀   ▀▀█████▄         #
+#  ███    ███   ███    ███   ███    █▄   ▀██████████   ███▐██▄        #
+#  ███   ▄███   ███    ███   ███    ███   ███    ███   ███ ▀███▄      #
+#  ████████▀    ███    █▀    ██████████   ███    ███   ███   ▀█▀      #
+#                                                                     #
+#######################################################################
+
+
+config:
+  prefix: "&7[&a&lK&f&lB&7]"
+
+  welcome_message:
+    enable: true
+    message:
+    - '&a&m                        '
+    - '&e¡Bienvenido &a%player%&e!'
+    - ''
+    - '&e Mensaje del día: &aMiau'
+    - '&a&m                        '
+
+  teleport_on_join:
+    enable: false
+    Location:
+    - 'world'      # Mundo
+    - '268.5'      # Coordenada X
+    - '-24.5'      # Coordenada Y
+    - '119'        # Coordenada Z
+    - '90'         # Yaw
+    - '0'          # Pitch
+
+messages:
+  prevent_block_break: " &c¡No puedes romper bloques aquí!"
+
+  block_words_message: " &c¡No puedes escribir eso aquí!"
