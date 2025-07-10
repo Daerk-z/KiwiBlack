@@ -94,6 +94,7 @@ public class TptCommand implements CommandExecutor {
         Bukkit.broadcastMessage(MessageColors.coloredMessage("&b&m------------------------------"));
         Bukkit.broadcastMessage(MessageColors.coloredMessage("&eEl jugador &a"+ player.getName() + "&e se ha"));
         Bukkit.broadcastMessage(MessageColors.coloredMessage("&eteletransportado a &a" + target.getName() + "&e."));
+        Bukkit.broadcastMessage(MessageColors.coloredMessage("&ejiji"));
         Bukkit.broadcastMessage(MessageColors.coloredMessage("&b&m------------------------------"));
 
 
