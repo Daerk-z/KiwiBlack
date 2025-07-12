@@ -1,6 +1,8 @@
 package kb.daerk.config;
 
 import kb.daerk.KiwiBlackPP;
+
+import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.configuration.file.FileConfiguration;
 
 import java.util.List;
@@ -19,19 +21,20 @@ public class FileConfigManager {
     private List<String> teleportInLocation;
     private String blockWordsMessage;
 
-    public FileConfigManager(KiwiBlackPP plugin){
+    private Boolean isBlockBreakRewardsEnabled;
+    ConfigurationSection blockBreakRewardsBlocksSection;
+
+    public FileConfigManager(KiwiBlackPP plugin) {
         this.plugin = plugin;
-        configFile = new CustomConfig("config.yml",null,plugin);
+        configFile = new CustomConfig("config.yml", null, plugin);
         configFile.registerConfig();
         loadConfig();
     }
 
-
     /**
      * Carga los datos de la configuración siguiendo el PATH correspondiente.
      */
-    public void loadConfig(){
-
+    public void loadConfig() {
 
         FileConfiguration config = configFile.getConfig();
         prefix = config.getString("config.prefix");
@@ -41,18 +44,22 @@ public class FileConfigManager {
         isTeleportOnJoinEnable = config.getBoolean("config.teleport_on_join.enable");
         teleportInLocation = config.getStringList("config.teleport_on_join.Location");
         blockWordsMessage = config.getString("messages.block_words_message");
+
+        isBlockBreakRewardsEnabled = config.getBoolean("config.block_break_rewards.enabled");
+        blockBreakRewardsBlocksSection = config.getConfigurationSection("config.block_break_rewards.blocks");
     }
 
     /**
      * Recarga la configuración en caso de haber hecho un cambio.
      */
-    public void reloadConfig(){
+    public void reloadConfig() {
         configFile.reloadConfig();
         loadConfig();
     }
 
     /**
-     * Se encarga de obtener los datos del "public void loadConfig" regresando sus valores asignados.
+     * Se encarga de obtener los datos del "public void loadConfig" regresando sus
+     * valores asignados.
      */
     public String getPreventBlockBreakMessage() {
         return preventBlockBreakMessage;
@@ -79,6 +86,23 @@ public class FileConfigManager {
     }
 
     public String getPrefix() {
-     return prefix;
+        return prefix;
     }
+
+    public Boolean getIsBlockBreakRewardsEnabled() {
+        return isBlockBreakRewardsEnabled;
+    }
+
+    public Boolean getIsBlockBreakRewardsBlockAllowed(String blockName) {
+        return blockBreakRewardsBlocksSection.contains(blockName);
+    }
+
+    public double getBlockBreakRewardsBlockChance(String blockName) {
+        return blockBreakRewardsBlocksSection.getDouble(blockName + ".chance", 0.0);
+    }
+
+    public Integer getBlockBreakRewardBlockMultiplier(String blockName) {
+        return blockBreakRewardsBlocksSection.getInt(blockName + ".multiplier", 0);
+    }
+
 }
