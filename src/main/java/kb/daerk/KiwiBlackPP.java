@@ -2,6 +2,7 @@ package kb.daerk;
 
 import kb.daerk.commands.*;
 import kb.daerk.config.FileConfigManager;
+import kb.daerk.eventListener.BlockBreakRewardsListener;
 import kb.daerk.eventListener.InventoryListener;
 import kb.daerk.eventListener.PlayerListener;
 import kb.daerk.managers.MenuInventoryManager;
@@ -75,6 +76,7 @@ public class KiwiBlackPP extends JavaPlugin {
     public void registerEvents() {
         getServer().getPluginManager().registerEvents(new PlayerListener(this), this);
         getServer().getPluginManager().registerEvents(new InventoryListener(this), this);
+        getServer().getPluginManager().registerEvents(new BlockBreakRewardsListener(this), this);
     }
 
     public FileConfigManager getFileConfigManager(){

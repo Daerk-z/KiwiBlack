@@ -33,6 +33,22 @@ config:
     - '90'         # Yaw
     - '0'          # Pitch
 
+  block_break_rewards:
+    enabled: false
+    blocks:
+      IRON_ORE:
+        chance: 25 # 25%
+        multiplier: 1.5
+      DEEPSLATE_IRON_ORE:
+        chance: 35 # 35%
+        multiplier: 1.9
+      GOLD_ORE:
+        chance: 15
+        multiplier: 1.2
+      DEEPSLATE_GOLD_ORE:
+        chance: 20
+        multiplier: 1.3
+
 messages:
   prevent_block_break: " &c¡No puedes romper bloques aquí!"
 
