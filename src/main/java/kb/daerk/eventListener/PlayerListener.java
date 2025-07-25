@@ -10,6 +10,7 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
+import org.bukkit.event.player.PlayerQuitEvent;
 
 import java.util.List;
 
@@ -66,4 +67,9 @@ public class PlayerListener implements Listener {
         }
     }
 
+    @EventHandler
+    public void onQuit(PlayerQuitEvent event) {
+        Player player = event.getPlayer();
+        event.setQuitMessage(MessageColors.coloredMessage("&e[&c-&e] &d" + player.getName() + "&e se ha desconectado."));
+    }
     }

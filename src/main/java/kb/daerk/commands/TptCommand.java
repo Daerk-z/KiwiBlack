@@ -74,21 +74,21 @@ public class TptCommand implements CommandExecutor {
         }
 
         // Definir la cantidad requerida de diamantes
-        int requiredSnowball = 10;
+        //int requiredSnowball = 10;
 
         // Verificar si el jugador tiene al menos 10 diamantes en su inventario
-        if (!player.getInventory().containsAtLeast(new ItemStack(Material.SNOWBALL), requiredSnowball)) {
-            player.sendMessage(MessageColors.coloredMessage("&cNo tienes suficientes bolas de nieve para usar este comando."));
-            return true;
-        }
+        //if (!player.getInventory().containsAtLeast(new ItemStack(Material.SNOWBALL), requiredSnowball)) {
+        //    player.sendMessage(MessageColors.coloredMessage("&cNo tienes suficientes bolas de nieve para usar este comando."));
+        //    return true;
+        //}
 
         // Retirar 10 diamantes del inventario del jugador
-        removeItems(player, Material.SNOWBALL, requiredSnowball);
+        //removeItems(player, Material.SNOWBALL, requiredSnowball);
 
         // Teletransportar al jugador al destino
         player.teleport(target);
-        player.sendMessage(MessageColors.coloredMessage(plugin.getPrefix()+"&e Te has teletransportado a &a" + target.getName()
-                + "&e. Se han retirado &b" + requiredSnowball + "&e bolas de nieve de tu inventario."));
+        player.sendMessage(MessageColors.coloredMessage(plugin.getPrefix()+"&e Te has teletransportado a &a" + target.getName()));
+                //+ "&e. Se han retirado &b" + requiredSnowball + "&e bolas de nieve de tu inventario."));
 
         // Aviso global (broadcast)
         Bukkit.broadcastMessage(MessageColors.coloredMessage("&b&m------------------------------"));
@@ -112,28 +112,28 @@ public class TptCommand implements CommandExecutor {
      *
      * Esto por un error que me dio antes, jiejiejiejiejie
      */
-    private void removeItems(Player player, Material material, int amount) {
-        int remaining = amount;
-        ItemStack[] contents = player.getInventory().getContents();
-
-        for (int i = 0; i < contents.length; i++) {
-            ItemStack item = contents[i];
-            if (item != null && item.getType() == material) {
-                int stackAmount = item.getAmount();
-
-                if (stackAmount <= remaining) {
-                    remaining -= stackAmount;
-                    player.getInventory().setItem(i, null); // Limpia el slot
-                } else {
-                    item.setAmount(stackAmount - remaining);
-                    player.getInventory().setItem(i, item);
-                    remaining = 0;
-                }
-
-                if (remaining <= 0) {
-                    break;
-                }
-            }
-        }
-    }
+    //private void removeItems(Player player, Material material, int amount) {
+    //    int remaining = amount;
+    //    ItemStack[] contents = player.getInventory().getContents();
+    //
+    //    for (int i = 0; i < contents.length; i++) {
+    //        ItemStack item = contents[i];
+    //        if (item != null && item.getType() == material) {
+    //            int stackAmount = item.getAmount();
+    //
+    //            if (stackAmount <= remaining) {
+    //                remaining -= stackAmount;
+    //                player.getInventory().setItem(i, null); // Limpia el slot
+    //            } else {
+    //                item.setAmount(stackAmount - remaining);
+    //                player.getInventory().setItem(i, item);
+    //                remaining = 0;
+    //            }
+    //
+    //            if (remaining <= 0) {
+    //                break;
+    //            }
+    //        }
+    //    }
+    //}
 }

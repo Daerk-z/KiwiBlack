@@ -34,20 +34,50 @@ config:
     - '0'          # Pitch
 
   block_break_rewards:
-    enabled: false
+    enabled: true
     blocks:
-      IRON_ORE:
+      COAL_ORE:
         chance: 25 # 25%
-        multiplier: 1.5
+        multiplier: 1.0
+      DEEPSLATE_COAL_ORE:
+        chance: 25 # 25%
+        multiplier: 1.0  
+      IRON_ORE:
+        chance: 20 # 20%
+        multiplier: 1.0
       DEEPSLATE_IRON_ORE:
-        chance: 35 # 35%
-        multiplier: 1.9
+        chance: 20 # 20%
+        multiplier: 1.0
       GOLD_ORE:
-        chance: 15
-        multiplier: 1.2
+        chance: 15 # 15%
+        multiplier: 1.0
       DEEPSLATE_GOLD_ORE:
-        chance: 20
-        multiplier: 1.3
+        chance: 15 # 15%
+        multiplier: 1.0
+      DIAMOND_ORE:
+        chance: 10 # 10%
+        multiplier: 1.0
+      DEEPSLATE_DIAMOND_ORE:
+        chance: 10 # 10%
+        multiplier: 1.0
+      EMERALD_ORE:
+        chance: 5 # 5%
+        multiplier: 1.0
+      DEEPSLATE_EMERALD_ORE:
+        chance: 5 # 5%
+        multiplier: 1.0
+      LAPIS_ORE:
+        chance: 10 # 10%
+        multiplier: 1.0
+      DEEPSLATE_LAPIS_ORE:
+        chance: 10 # 10%
+        multiplier: 1.0
+      NETHER_QUARTZ_ORE:
+        chance: 20 # 20%
+        multiplier: 1.0
+      ANCIENT_DEBRIS:
+        chance: 5 # 5%
+        multiplier: 1.0
 
 messages:
   prevent_block_break: " &c¡No puedes romper bloques aquí!"

@@ -32,8 +32,8 @@ public class BlockBreakRewardsListener implements Listener {
             return;
 
         // Abort if player has no permission
-        if (!event.getPlayer().hasPermission("kiwiblack.block.break"))
-            return;
+        //if (!event.getPlayer().hasPermission("kiwiblack.block.break"))
+        //    return;
             
         // Abort if player is mining silk touch to prevent infinite dupes
         if (event.getPlayer().getInventory().getItemInMainHand().containsEnchantment(Enchantment.SILK_TOUCH))
