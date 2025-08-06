@@ -76,7 +76,7 @@ config:
         chance: 20 # 20%
         multiplier: 1.0
       ANCIENT_DEBRIS:
-        chance: 5 # 5%
+        chance: 20 # 20%
         multiplier: 1.0
 
 messages:
