@@ -1,4 +1,4 @@
-package kb.daerk.eventListener;
+package dev.daerk.eventListener;
 
 import java.util.Map;
 import java.util.concurrent.ThreadLocalRandom;
@@ -9,8 +9,8 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.inventory.ItemStack;
 
-import kb.daerk.KiwiBlackPP;
-import kb.daerk.tools.MessageColors;
+import dev.daerk.KiwiBlackPP;
+import dev.daerk.tools.MessageColors;
 
 /*
  * Handles the logic behind Block Break Rewards

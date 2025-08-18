@@ -1,4 +1,4 @@
-package kb.daerk.model;
+package dev.daerk.model;
 
 import org.bukkit.entity.Player;
 

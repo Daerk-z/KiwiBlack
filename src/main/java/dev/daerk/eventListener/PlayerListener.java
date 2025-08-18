@@ -1,8 +1,8 @@
-package kb.daerk.eventListener;
+package dev.daerk.eventListener;
 
-import kb.daerk.KiwiBlackPP;
-import kb.daerk.config.FileConfigManager;
-import kb.daerk.tools.MessageColors;
+import dev.daerk.KiwiBlackPP;
+import dev.daerk.config.FileConfigManager;
+import dev.daerk.tools.MessageColors;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.entity.Player;

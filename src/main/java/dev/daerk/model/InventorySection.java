@@ -1,4 +1,4 @@
-package kb.daerk.model;
+package dev.daerk.model;
 
 public enum InventorySection {
     MENU_MAIN,

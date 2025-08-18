@@ -1,4 +1,4 @@
-package kb.daerk.tools;
+package dev.daerk.tools;
 
 import org.bukkit.ChatColor;
 

@@ -1,7 +1,7 @@
-package kb.daerk.eventListener;
+package dev.daerk.eventListener;
 
-import kb.daerk.KiwiBlackPP;
-import kb.daerk.Model.InventoryPlayer;
+import dev.daerk.KiwiBlackPP;
+import dev.daerk.Model.InventoryPlayer;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;

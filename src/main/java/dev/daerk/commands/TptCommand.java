@@ -1,6 +1,6 @@
-package kb.daerk.commands;
+package dev.daerk.commands;
 
-import kb.daerk.KiwiBlackPP;
+import dev.daerk.KiwiBlackPP;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.command.Command;
@@ -8,7 +8,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
-import kb.daerk.tools.MessageColors;
+import dev.daerk.tools.MessageColors;
 
 import java.util.HashMap;
 import java.util.Map;

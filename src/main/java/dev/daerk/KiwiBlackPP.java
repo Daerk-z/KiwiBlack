@@ -1,12 +1,12 @@
-package kb.daerk;
+package dev.daerk;
 
-import kb.daerk.commands.*;
-import kb.daerk.config.FileConfigManager;
-import kb.daerk.eventListener.BlockBreakRewardsListener;
-import kb.daerk.eventListener.InventoryListener;
-import kb.daerk.eventListener.PlayerListener;
-import kb.daerk.managers.MenuInventoryManager;
-import kb.daerk.tools.MessageColors;
+import dev.daerk.commands.*;
+import dev.daerk.config.FileConfigManager;
+import dev.daerk.eventListener.BlockBreakRewardsListener;
+import dev.daerk.eventListener.InventoryListener;
+import dev.daerk.eventListener.PlayerListener;
+import dev.daerk.managers.MenuInventoryManager;
+import dev.daerk.tools.MessageColors;
 import org.bukkit.Bukkit;
 import org.bukkit.command.PluginCommand;
 import org.bukkit.plugin.java.JavaPlugin;

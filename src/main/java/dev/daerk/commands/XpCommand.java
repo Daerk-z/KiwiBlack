@@ -1,7 +1,7 @@
-package kb.daerk.commands;
+package dev.daerk.commands;
 
-import kb.daerk.KiwiBlackPP;
-import kb.daerk.tools.MessageColors;
+import dev.daerk.KiwiBlackPP;
+import dev.daerk.tools.MessageColors;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;

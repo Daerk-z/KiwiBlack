@@ -1,8 +1,8 @@
-package kb.daerk.managers;
+package dev.daerk.managers;
 
-import kb.daerk.Model.InventoryPlayer;
-import kb.daerk.Model.InventorySection;
-import kb.daerk.tools.MessageColors;
+import dev.daerk.Model.InventoryPlayer;
+import dev.daerk.Model.InventorySection;
+import dev.daerk.tools.MessageColors;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
