@@ -1,6 +1,6 @@
-main: kb.daerk.KiwiBlackPP
+main: dev.daerk.KiwiBlackPP
 version: 1.0.0
-name: KiwiBlack
+name: KiwiBlackPP
 author: DaerK
 api-version: 1.21
 

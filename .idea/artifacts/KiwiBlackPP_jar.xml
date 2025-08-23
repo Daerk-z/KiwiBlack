@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" name="KiwiBlackPP:jar">
-    <output-path>$USER_HOME$/Desktop/Plugins Exportados IntellijIDEA</output-path>
-    <root id="archive" name="KiwiBlackPP.jar">
-      <element id="module-output" name="KiwiBlackPP" />
-    </root>
-  </artifact>
-</component>

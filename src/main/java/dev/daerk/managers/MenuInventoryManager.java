@@ -1,7 +1,7 @@
 package dev.daerk.managers;
 
-import dev.daerk.Model.InventoryPlayer;
-import dev.daerk.Model.InventorySection;
+import dev.daerk.model.InventoryPlayer;
+import dev.daerk.model.InventorySection;
 import dev.daerk.tools.MessageColors;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;

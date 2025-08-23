@@ -1,7 +1,7 @@
 package dev.daerk.commands;
 
 import dev.daerk.KiwiBlackPP;
-import dev.daerk.Model.InventoryPlayer;
+import dev.daerk.model.InventoryPlayer;
 import dev.daerk.tools.MessageColors;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
