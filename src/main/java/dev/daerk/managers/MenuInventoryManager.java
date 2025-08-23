@@ -155,11 +155,14 @@ public class MenuInventoryManager {
             if(slot == 24){
                 if(player.hasPermission("kiwiblackpp.vip") && clickType.equals(ClickType.LEFT)){
                     player.sendMessage(MessageColors.coloredMessage("&cEste comando solo puede ser ejecutado por jugadores VIP."));
+                    player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_PLING, 1, 2.0F);
                     return;
                 }
                 openEffectInventory(inventoryPlayer);
             }
 
+            player.playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1, 2.0F);
+            player.stopSound(Sound.MUSIC_DRAGON);
         }else if(section.equals(InventorySection.MENU_EFFECTS)){
             if(slot == 18){
                 openMainInventory(inventoryPlayer);

@@ -20,7 +20,7 @@ public class CustomConfig {
         this.fileName = fileName;
         this.folderName = folderName;
         this.plugin = plugin;
-        this.newFile = newFile;
+        // this.newFile = newFile;
     }
 
     public String getPath(){
