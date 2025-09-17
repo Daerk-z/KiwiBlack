@@ -1,6 +1,6 @@
 package dev.daerk.config;
 
-import dev.daerk.KiwiBlackPP;
+import dev.daerk.KiwiBlack;
 
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -11,7 +11,7 @@ public class FileConfigManager {
 
     private CustomConfig configFile;
 
-    private KiwiBlackPP plugin;
+    private KiwiBlack plugin;
 
     private String prefix;
     private Boolean isWelcomeMessageEnable;
@@ -24,9 +24,9 @@ public class FileConfigManager {
     private Boolean isBlockBreakRewardsEnabled;
     ConfigurationSection blockBreakRewardsBlocksSection;
 
-    public FileConfigManager(KiwiBlackPP plugin) {
+    public FileConfigManager(KiwiBlack plugin) {
         this.plugin = plugin;
-        configFile = new CustomConfig("config.yml", null, plugin);
+        configFile = new CustomConfig("config.yml", null, plugin, false);
         configFile.registerConfig();
         loadConfig();
     }

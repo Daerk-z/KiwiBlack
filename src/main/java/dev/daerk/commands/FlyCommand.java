@@ -1,6 +1,6 @@
 package dev.daerk.commands;
 
-import dev.daerk.KiwiBlackPP;
+import dev.daerk.KiwiBlack;
 import dev.daerk.tools.MessageColors;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
@@ -11,9 +11,9 @@ import org.bukkit.entity.Player;
 
 public class FlyCommand implements CommandExecutor {
 
-    private KiwiBlackPP plugin;
+    private KiwiBlack plugin;
 
-    public FlyCommand(KiwiBlackPP plugin) {
+    public FlyCommand(KiwiBlack plugin) {
         this.plugin = plugin;
     }
 
@@ -22,7 +22,7 @@ public class FlyCommand implements CommandExecutor {
 
         // /fly <jugador>(opcional)
 
-        if (!sender.hasPermission("kiwiblackpp.commands.fly")) {
+        if (!sender.hasPermission("KiwiBlack.commands.fly")) {
             sender.sendMessage(MessageColors.coloredMessage(plugin.getPrefix() + " &cNo tienes permiso para ejecutar este comando."));
             return true;
         }

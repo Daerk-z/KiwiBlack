@@ -1,6 +1,6 @@
-main: dev.daerk.KiwiBlackPP
+main: dev.daerk.KiwiBlack
 version: 1.0.0
-name: KiwiBlackPP
+name: KiwiBlack
 author: DaerK
 api-version: 1.21
 
@@ -22,3 +22,5 @@ commands:
     description: Comando que otorga items previamente realizados.
   menu:
     description: Comando que permite abrir un inventario.
+  bcoins:
+    description: Comando que permite añadir, setear o ver las coins Black de un jugador.

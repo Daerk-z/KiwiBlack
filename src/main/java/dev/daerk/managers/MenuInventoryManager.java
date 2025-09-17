@@ -154,7 +154,7 @@ public class MenuInventoryManager {
         InventorySection section = inventoryPlayer.getSection();
         if(section.equals(InventorySection.MENU_MAIN)){
             if(slot == 24){
-                if(player.hasPermission("kiwiblackpp.vip") && clickType.equals(ClickType.LEFT)){
+                if(player.hasPermission("KiwiBlack.vip") && clickType.equals(ClickType.LEFT)){
                     player.sendMessage(MessageColors.coloredMessage("&cEste comando solo puede ser ejecutado por jugadores VIP."));
                     player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_PLING, 1, 2.0F);
                     return;

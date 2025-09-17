@@ -1,6 +1,6 @@
 package dev.daerk.commands;
 
-import dev.daerk.KiwiBlackPP;
+import dev.daerk.KiwiBlack;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.command.Command;
@@ -16,9 +16,9 @@ import java.util.UUID;
 
 public class TptCommand implements CommandExecutor {
 
-    private KiwiBlackPP plugin;
+    private KiwiBlack plugin;
 
-    public TptCommand(KiwiBlackPP plugin) {
+    public TptCommand(KiwiBlack plugin) {
         this.plugin = plugin;
     }
 

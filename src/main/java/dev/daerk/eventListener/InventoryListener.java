@@ -1,6 +1,6 @@
 package dev.daerk.eventListener;
 
-import dev.daerk.KiwiBlackPP;
+import dev.daerk.KiwiBlack;
 import dev.daerk.model.InventoryPlayer;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -10,9 +10,9 @@ import org.bukkit.event.inventory.InventoryCloseEvent;
 
 public class InventoryListener implements Listener {
 
-    private KiwiBlackPP plugin;
+    private KiwiBlack plugin;
 
-    public InventoryListener(KiwiBlackPP plugin){
+    public InventoryListener(KiwiBlack plugin){
         this.plugin = plugin;
     }
 

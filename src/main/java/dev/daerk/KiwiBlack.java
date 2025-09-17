@@ -2,16 +2,18 @@ package dev.daerk;
 
 import dev.daerk.commands.*;
 import dev.daerk.config.FileConfigManager;
+import dev.daerk.config.PlayersConfigManager;
 import dev.daerk.eventListener.BlockBreakRewardsListener;
 import dev.daerk.eventListener.InventoryListener;
 import dev.daerk.eventListener.PlayerListener;
 import dev.daerk.managers.MenuInventoryManager;
+import dev.daerk.managers.PlayerDataManager;
 import dev.daerk.tools.MessageColors;
 import org.bukkit.Bukkit;
 import org.bukkit.command.PluginCommand;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public class KiwiBlackPP extends JavaPlugin {
+public class KiwiBlack extends JavaPlugin {
 
     private String prefix;
 
@@ -21,15 +23,21 @@ public class KiwiBlackPP extends JavaPlugin {
 
     private String version = getDescription().getVersion();
     private FileConfigManager fileConfigManager;
+    private PlayersConfigManager playersConfigManager;
     private MenuInventoryManager menuInventoryManager;
+    private PlayerDataManager playerDataManager;
 
     public void onEnable() {
 
         fileConfigManager = new FileConfigManager(this);
+        menuInventoryManager = new MenuInventoryManager();
+        playerDataManager = new PlayerDataManager();
+        playersConfigManager = new PlayersConfigManager(this, "players");
+
         this.prefix = fileConfigManager.getPrefix() +"&f";
+
         registerCommands();
         registerEvents();
-        menuInventoryManager = new MenuInventoryManager();
 
 
         Bukkit.getConsoleSender().sendMessage(MessageColors.coloredMessage("&e[&a&lKiwi&f&lBlack&e] &a+=================================+"));
@@ -44,6 +52,9 @@ public class KiwiBlackPP extends JavaPlugin {
 
 
     public void onDisable() {
+
+        playersConfigManager.saveConfigs();
+
         Bukkit.getConsoleSender().sendMessage(MessageColors.coloredMessage("&e[&a&lKiwi&f&lBlack&e] &a+=================================+"));
         Bukkit.getConsoleSender().sendMessage(MessageColors.coloredMessage("&e[&a&lKiwi&f&lBlack&e] &a|            &a&lKIWI                 |"));
         Bukkit.getConsoleSender().sendMessage(MessageColors.coloredMessage("&e[&a&lKiwi&f&lBlack&e] &a|              &f&lBLACK              &a|"));
@@ -72,6 +83,7 @@ public class KiwiBlackPP extends JavaPlugin {
         this.getCommand("item").setExecutor(new ItemCommand(this));
         this.getCommand("menu").setExecutor(new MenuCommand(this));
         this.getCommand("tpt").setExecutor(new TptCommand(this));
+        this.getCommand("bcoins").setExecutor(new BcoinsCommand(this));
     }
     public void registerEvents() {
         getServer().getPluginManager().registerEvents(new PlayerListener(this), this);
@@ -85,5 +97,13 @@ public class KiwiBlackPP extends JavaPlugin {
 
     public MenuInventoryManager getMenuInventoryManager() {
         return menuInventoryManager;
+    }
+
+    public PlayersConfigManager getPlayersConfigManager(){
+        return playersConfigManager;
+    }
+
+    public PlayerDataManager getPlayerDataManager(){
+        return playerDataManager;
     }
 }

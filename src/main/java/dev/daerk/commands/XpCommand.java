@@ -1,6 +1,6 @@
 package dev.daerk.commands;
 
-import dev.daerk.KiwiBlackPP;
+import dev.daerk.KiwiBlack;
 import dev.daerk.tools.MessageColors;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
@@ -10,9 +10,9 @@ import org.bukkit.entity.Player;
 
 public class XpCommand implements CommandExecutor {
 
-    private KiwiBlackPP plugin;
+    private KiwiBlack plugin;
 
-    public XpCommand(KiwiBlackPP plugin){
+    public XpCommand(KiwiBlack plugin){
         this.plugin = plugin;
     }
 
@@ -21,7 +21,7 @@ public class XpCommand implements CommandExecutor {
 
         // /xp <cantidad> <jugador>(opcional)
 
-        if (!sender.hasPermission("kiwiblackpp.commands.xp")) {
+        if (!sender.hasPermission("KiwiBlack.commands.xp")) {
             sender.sendMessage(MessageColors.coloredMessage(plugin.getPrefix() + " &cNo tienes permiso para ejecutar este comando."));
             return true;
         }

@@ -1,9 +1,8 @@
 package dev.daerk.commands;
 
-import dev.daerk.KiwiBlackPP;
+import dev.daerk.KiwiBlack;
 import dev.daerk.model.InventoryPlayer;
 import dev.daerk.tools.MessageColors;
-import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -12,9 +11,9 @@ import org.bukkit.entity.Player;
 
 public class MenuCommand implements CommandExecutor {
 
-    private KiwiBlackPP plugin;
+    private KiwiBlack plugin;
 
-    public MenuCommand(KiwiBlackPP plugin) {
+    public MenuCommand(KiwiBlack plugin) {
         this.plugin = plugin;
     }
 

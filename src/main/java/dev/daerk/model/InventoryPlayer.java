@@ -8,7 +8,7 @@ public class InventoryPlayer {
 
     public InventoryPlayer(Player player) {
         this.player = player;
-        this.section = section;
+        //this.section = section;
     }
 
     public Player getPlayer() {

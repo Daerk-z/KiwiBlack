@@ -1,6 +1,6 @@
 package dev.daerk.config;
 
-import dev.daerk.KiwiBlackPP;
+import dev.daerk.KiwiBlack;
 import org.bukkit.configuration.InvalidConfigurationException;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
@@ -9,18 +9,18 @@ import java.io.File;
 import java.io.IOException;
 
 public class CustomConfig {
-    private KiwiBlackPP plugin;
+    private KiwiBlack plugin;
     private String fileName;
     private FileConfiguration fileConfiguration = null;
     private File file = null;
     private String folderName;
     private boolean newFile;
 
-    public CustomConfig(String fileName, String folderName, KiwiBlackPP plugin){
+    public CustomConfig(String fileName, String folderName, KiwiBlack plugin, boolean newFile){
         this.fileName = fileName;
         this.folderName = folderName;
         this.plugin = plugin;
-        // this.newFile = newFile;
+        this.newFile = newFile;
     }
 
     public String getPath(){

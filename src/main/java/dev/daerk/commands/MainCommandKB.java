@@ -1,6 +1,6 @@
 package dev.daerk.commands;
 
-import dev.daerk.KiwiBlackPP;
+import dev.daerk.KiwiBlack;
 import dev.daerk.tools.MessageColors;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -16,9 +16,9 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class MainCommandKB implements CommandExecutor, TabCompleter {
-    private final KiwiBlackPP plugin;
+    private final KiwiBlack plugin;
 
-    public MainCommandKB(KiwiBlackPP plugin){
+    public MainCommandKB(KiwiBlack plugin){
         this.plugin = plugin;
     }
 
@@ -33,11 +33,11 @@ public class MainCommandKB implements CommandExecutor, TabCompleter {
                 completions.add("bienvenida");
                 completions.add("fecha");
 
-                if (sender.hasPermission("kiwiblackpp.commands.get")) {
+                if (sender.hasPermission("KiwiBlack.commands.get")) {
                     completions.add("get");
                 }
 
-                if (sender.hasPermission("kiwiblackpp.commands.reload")) {
+                if (sender.hasPermission("KiwiBlack.commands.reload")) {
                     completions.add("reload");
                 }
 
@@ -55,7 +55,7 @@ public class MainCommandKB implements CommandExecutor, TabCompleter {
 
         // Subcomandos de 'get'
         if (args.length == 2 && args[0].equalsIgnoreCase("get")) {
-            if (sender.hasPermission("kiwiblackpp.commands.get")) {
+            if (sender.hasPermission("KiwiBlack.commands.get")) {
                 completions.add("autor");
                 completions.add("version");
                 return filterCompletions(completions, args[1]);
@@ -150,7 +150,7 @@ public class MainCommandKB implements CommandExecutor, TabCompleter {
 
     public void subCommandGet(CommandSender sender, String[] args){
 
-        if(!sender.hasPermission("kiwiblackpp.commands.get")){
+        if(!sender.hasPermission("KiwiBlack.commands.get")){
             sender.sendMessage(MessageColors.coloredMessage(plugin.getPrefix() + " &c No tienes permiso para ejecutar este comando."));
             return;
         }
@@ -177,7 +177,7 @@ public class MainCommandKB implements CommandExecutor, TabCompleter {
 
     public void subCommandReload(CommandSender sender) {
 
-        if (!sender.hasPermission("kiwiblackpp.commands.relaod")) {
+        if (!sender.hasPermission("KiwiBlack.commands.relaod")) {
             sender.sendMessage(MessageColors.coloredMessage(plugin.getPrefix() + " &c No tienes permiso para ejecutar este comando."));
             return;
         }

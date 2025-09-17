@@ -1,24 +1,27 @@
 package dev.daerk.eventListener;
 
-import dev.daerk.KiwiBlackPP;
+import dev.daerk.KiwiBlack;
 import dev.daerk.config.FileConfigManager;
 import dev.daerk.tools.MessageColors;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
+import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+import org.bukkit.event.entity.EntityDeathEvent;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 
 import java.util.List;
+import java.util.Random;
 
 public class PlayerListener implements Listener {
 
-    private KiwiBlackPP plugin;
+    private KiwiBlack plugin;
 
-    public PlayerListener(KiwiBlackPP plugin) {
+    public PlayerListener(KiwiBlack plugin) {
         this.plugin = plugin;
     }
 
@@ -42,6 +45,8 @@ public class PlayerListener implements Listener {
     @EventHandler
     public void onJoin(PlayerJoinEvent event) {
         Player player = event.getPlayer();
+        plugin.getPlayerDataManager().updateName(player);
+
         event.setJoinMessage(MessageColors.coloredMessage("&e[&a+&e] &d" +player.getName()+ "&e se ha unido."));
 
         FileConfigManager fileConfigManager = plugin.getFileConfigManager();
@@ -72,4 +77,19 @@ public class PlayerListener implements Listener {
         Player player = event.getPlayer();
         event.setQuitMessage(MessageColors.coloredMessage("&e[&c-&e] &d" + player.getName() + "&e se ha desconectado."));
     }
+
+    @EventHandler
+    public void onEndermanKill(EntityDeathEvent event){
+        if(!event.getEntity().getType().equals(EntityType.ENDERMAN)){
+            return;
+        }
+
+        Player player = event.getEntity().getKiller();
+        if(player != null){
+            int num = new Random().nextInt(10)+1;
+            plugin.getPlayerDataManager().addBlackCoins(player, num);
+
+            player.sendMessage(MessageColors.coloredMessage(plugin.getPrefix() + " &aHas recibido" +num+ "&eBlackCoins"));
+        }
     }
+}

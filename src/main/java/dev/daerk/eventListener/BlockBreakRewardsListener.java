@@ -9,7 +9,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.inventory.ItemStack;
 
-import dev.daerk.KiwiBlackPP;
+import dev.daerk.KiwiBlack;
 import dev.daerk.tools.MessageColors;
 
 /*
@@ -19,9 +19,9 @@ import dev.daerk.tools.MessageColors;
  */
 public class BlockBreakRewardsListener implements Listener {
 
-    KiwiBlackPP plugin;
+    KiwiBlack plugin;
 
-    public BlockBreakRewardsListener(KiwiBlackPP plugin) {
+    public BlockBreakRewardsListener(KiwiBlack plugin) {
         this.plugin = plugin;
     }
 

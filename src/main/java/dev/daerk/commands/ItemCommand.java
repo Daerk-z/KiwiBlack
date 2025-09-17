@@ -1,6 +1,6 @@
 package dev.daerk.commands;
 
-import dev.daerk.KiwiBlackPP;
+import dev.daerk.KiwiBlack;
 import dev.daerk.tools.ItemTools;
 import dev.daerk.tools.MessageColors;
 import org.bukkit.command.Command;
@@ -11,9 +11,9 @@ import org.bukkit.inventory.ItemStack;
 
 public class ItemCommand implements CommandExecutor {
 
-    private KiwiBlackPP plugin;
+    private KiwiBlack plugin;
 
-    public ItemCommand(KiwiBlackPP plugin) {
+    public ItemCommand(KiwiBlack plugin) {
         this.plugin = plugin;
     }
 
@@ -26,7 +26,7 @@ public class ItemCommand implements CommandExecutor {
 
         Player player = (Player) sender;
 
-        if (!player.hasPermission("kiwiblackpp.commands.item")) {
+        if (!player.hasPermission("KiwiBlack.commands.item")) {
             player.sendMessage(MessageColors.coloredMessage(plugin.getPrefix() + " &cNo tienes permiso para ejecutar este comando."));
             return true;
         }
