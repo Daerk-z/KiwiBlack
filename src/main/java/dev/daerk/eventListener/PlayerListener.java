@@ -33,7 +33,7 @@ public class PlayerListener implements Listener {
         Player player = event.getPlayer();
         String message = event.getMessage();
 
-        if (message.toLowerCase().contains("esca es hombre")) {
+        if (message.toLowerCase().contains("Daerk")) {
             event.setCancelled(true);
             player.sendMessage(MessageColors.coloredMessage(plugin.getPrefix()+ plugin.getFileConfigManager().getBlockWordsMessage()));
         }
