@@ -1,4 +1,4 @@
-<h1>KiwiBlack<h1>
+# KiwiBlack
 
 ![Version](https://img.shields.io/badge/Version-1.0.0-black)
 ![Spigot](https://img.shields.io/badge/Spigot-1.21.8-yellow)
