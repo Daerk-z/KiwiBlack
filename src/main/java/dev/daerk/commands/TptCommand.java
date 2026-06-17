@@ -74,21 +74,21 @@ public class TptCommand implements CommandExecutor {
         }
 
         // Definir la cantidad requerida de diamantes
-        //int requiredSnowball = 10;
+        //int requiredDiamond = 10;
 
         // Verificar si el jugador tiene al menos 10 diamantes en su inventario
-        //if (!player.getInventory().containsAtLeast(new ItemStack(Material.SNOWBALL), requiredSnowball)) {
-        //    player.sendMessage(MessageColors.coloredMessage("&cNo tienes suficientes bolas de nieve para usar este comando."));
+        //if (!player.getInventory().containsAtLeast(new ItemStack(Material.DIAMOND), requiredDiamond)) {
+        //    player.sendMessage(MessageColors.coloredMessage("&cNo tienes suficientes diamantes para usar este comando."));
         //    return true;
         //}
 
         // Retirar 10 diamantes del inventario del jugador
-        //removeItems(player, Material.SNOWBALL, requiredSnowball);
+        //removeItems(player, Material.DIAMOND, requiredDiamond);
 
         // Teletransportar al jugador al destino
         player.teleport(target);
         player.sendMessage(MessageColors.coloredMessage(plugin.getPrefix()+"&e Te has teletransportado a &a" + target.getName()));
-                //+ "&e. Se han retirado &b" + requiredSnowball + "&e bolas de nieve de tu inventario."));
+                //+ "&e. Se han retirado &b" + requiredDiamond + "&e diamantes de tu inventario."));
 
         // Aviso global (broadcast)
         Bukkit.broadcastMessage(MessageColors.coloredMessage("&b&m------------------------------"));
