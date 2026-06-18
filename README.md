@@ -10,9 +10,9 @@ A Minecraft testing plugin with different uses such as items, commands, player e
 
 - Provide plugin information using the main command "/kb"
 - Give the virtual coin from the plugin
-- Teleport request to another player##con el uso de /tpt <jugador> con el costo de 10 diamantes para poder usarlo
-- Enable fly mode for you or for other players ##con el uso del comando /fly y puede habilitar el fly para otros jugadores teniendo OP y ejecutando /fly <jugador>
-- Give experience levels for you or for other players##con el comando /xp <cantidad> <jugador> (opcional)
+- Teleport request to another player
+- Enable fly mode for you or for other players 
+- Give experience levels for you or for other players
 - Give a default item
 - Open a custom menu
 
@@ -24,8 +24,9 @@ A Minecraft testing plugin with different uses such as items, commands, player e
 
 ## Installation 
 
-- Download the .jar file
-- Put the .jar file in the plugin folder of your server
+- Go and download the latest release [here](https://github.com/Daerk-z/KiwiBlack/releases/tag/1.0.0)
+- Download the `.jar` file
+- Put the `.jar` file in the plugin folder of your server
 - Restart your server to enable the plugin 
 
 ## Configuration
@@ -45,10 +46,15 @@ Information about the config file `config.yml`.
 #                                                                     #
 #######################################################################
 
-
+#
+# Modificable prefix from the plugin
+#
 config:
   prefix: "&7[&a&lK&f&lB&7]"
 
+#
+# Custom welcome message when a player joins to the world
+#
   welcome_message:
     enable: true
     message:
@@ -58,6 +64,9 @@ config:
     - '&e Mensaje del día: &aMiau'
     - '&a&m                        '
 
+#
+# Custom teleport when a player joins to the world
+#
   teleport_on_join:
     enable: false
     Location:
@@ -68,6 +77,9 @@ config:
     - '90'         # Yaw
     - '0'          # Pitch
 
+#
+# 
+#
   block_break_rewards:
     enabled: true
     blocks:
@@ -119,3 +131,9 @@ messages:
 
   block_words_message: " &c¡No puedes escribir eso aquí!"
   ```
+
+  ## Commands and uses
+
+  -
+  -
+  -
