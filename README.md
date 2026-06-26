@@ -130,10 +130,11 @@ messages:
   prevent_block_break: " &c¡No puedes romper bloques aquí!"
 
   block_words_message: " &c¡No puedes escribir eso aquí!"
-  ```
+
+```
 
   ## Commands and uses
 
-  -
-  -
-  -
+  - asd
+  - asd
+  - asd
